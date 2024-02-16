@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <html lang="am">
+    <title>WebTest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    function changeLanguage(select) {
+        var selectedLanguage = select.value;
+        if (selectedLanguage !== "") {
+            window.location.href = selectedLanguage;
+        }
+    }
+  </script>
+<body>
+    <header>
+       <h1>Բարի գալուստ իմ կայք</h1>
+       <nav>
+        <a href="#about">Իմ մասին</a>
+        <a href="#education">Կրթություն</a>
+        <a href="#experience">Փորձ</a>
+        <a href="#contact">Կապ</a>
+        <div class="selection">        
+        <label for="languages">Ընտրել լեզուն:</label>
+        <select name="languages" id="languages" onchange="changeLanguage(this)">
+            <option value="webtest_am.html">Հայերեն</option>
+            <option value="webtest_en.html">Անգլերեն</option>
+        </select>
+        </div>
+       </nav>
+
+    </header>
+    <main>
+      <div class="container">
+        <div class="text">
+            <section id="about">
+                <hr>
+                <div class="text">
+                    <p>Ողջույն, ես Սոնան եմ, 20 տարեկան ակտիվ երիտասարդ։ Հետաքրքրված եմ պարով, լողով, ինտելեկտուալ խաղերով և աշխարհագրությամբ։</p>
+                    <span>Իմ մասին ավելին իմանալու համար կարող եք ուսումնասիրել կայքը։</span>
+                </div>
+            </section>
+        </div>
+        <div class="image">
+            <img src="prof_pic.jpg" alt="Profile picture">
+        </div>
+    </div>
+        <hr>
+        <div>
+        <section id="education">
+            <h2>Կրթություն</h2>
+            <table>
+              <tr>
+                <th>Ուսումնական հաստատություն</th>
+                <th>Աստիճան</th>
+                <th>Տարեթիվ</th>
+              </tr>
+              <tr>
+                <td>ՀԱՊՀ</td>
+                <td>Ծրագրային ճարտարագիտության ուսանող, 3-րդ կուրս</td>
+                <td>2021</td>
+              </tr>
+              <tr>
+                <td>Tumo Labs</td>
+                <td>Ուսանող</td>
+                <td>2023</td>
+              </tr>
+            </table>
+        </section>
+        </div>
+        <hr>
+        <div>
+        <section id="experience">
+            <h2>Փորձ</h2>
+            <h3>Կամավորական աշխատանք</h3>
+            <ul>
+              <li>
+                <h4>Doccy</h4>
+                <ul>
+                  <li>Խոսքից տեքստի ճանաչում</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <hr> 
+    </main>
+    <footer>
+      <section id="contact">
+        <div class="message">
+          <form id="contact-form">
+            <label for="name">Անուն:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Փոստ:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Նամակ:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Ուղարկել</button>
+          </form>
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:sona.arzumanyan42@gmail.com.com">
+              <img src="mail-icon.png" alt="Email">
+          </a>
+          <a href="https://www.linkedin.com/in/sona-arzumanyan-857517273/">
+              <img src="linkedin-icon.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/sarzumanyan">
+              <img src="github-icon.png" alt="GitHub">
+          </a>
+          <a href="https://www.instagram.com/sonarzumanyan/?hl=en">
+              <img src="Instagram_icon.png.webp" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/sonarzumanyan">
+              <img src="facebook-icon.png" alt="Facebook">
+          </a>
+      </div>
+    </section>
+    </footer>
+</body>
+</html>

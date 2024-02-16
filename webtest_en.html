@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <html lang="en">
+    <title>WebTest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode" disabled>
+</head>
+
+<body>
+    <header>
+       <h1>Welcome to my website</h1>
+       <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button id="dark-mode-toggle">Dark Mode</button>
+        <div class="selection">
+          <label for="languages">Select language:</label>
+          <select name="languages" id="languages" onchange="changeLanguage(this)">
+              <option value="webtest_en.html">English</option>
+              <option value="webtest_am.html">Armenian</option>
+          </select>
+        </div>
+       </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="text">
+            <section id="about">
+                <hr>
+                <div class="text">
+                    <p>Hey, my name is Sona. I'm a 20 year old active and passionate member of youth. I am passionate about dancing, swimming, intellectual quizzes, puzzles and I really like geography. </p>
+                    <span>If you want to have more information about myself, feel free to explore the website.</span>
+                    <audio controls>
+                      <source src="Arctic Monkeys – Why'd You Only Call Me When You're High_.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
+                    <video width="120" height="240" controls>
+                      <source src="darkmode.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    
+                </div>
+            </section>
+        </div>
+        <div class="image">
+            <img id="profile-pic" src="prof_pic.jpg" alt="Profile picture">
+        </div>
+    </div>
+        <hr>
+        <div>
+        <section id="education">
+            <h2>Education</h2>
+            <table>
+              <tr>
+                <th>Institution</th>
+                <th>Degree</th>
+                <th>Year</th>
+              </tr>
+              <tr>
+                <td>NPUA</td>
+                <td>Junior student of faculty Software Engineering</td>
+                <td>2021</td>
+              </tr>
+              <tr>
+                <td>Tumo Labs</td>
+                <td>Student</td>
+                <td>2023</td>
+              </tr>
+            </table>
+        </section>
+        </div>
+        <hr>
+        <div>
+        <section id="experience">
+            <h2>Experience</h2>
+            <h3>Volunteer Experience</h3>
+            <ul>
+              <li>
+                <h4>Doccy</h4>
+                <ul>
+                  <li>Speech to text recognition</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <hr> 
+    </main>
+    <footer>
+      <section id="contact">
+        <div class="message">
+          <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:sona.arzumanyan42@gmail.com.com">
+              <img src="mail-icon.png" alt="Email">
+          </a>
+          <a href="https://www.linkedin.com/in/sona-arzumanyan-857517273/">
+              <img src="linkedin-icon.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/sarzumanyan">
+              <img src="github-icon.png" alt="GitHub">
+          </a>
+          <a href="https://www.instagram.com/sonarzumanyan/?hl=en">
+              <img src="Instagram_icon.png.webp" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/sonarzumanyan">
+              <img src="facebook-icon.png" alt="Facebook">
+          </a>
+      </div>
+    </section>
+    </footer>
+
+
+    <script>
+        function changeLanguage(select) {
+            var selectedLanguage = select.value;
+            if (selectedLanguage !== "") {
+                window.location.href = selectedLanguage;
+            }
+        }
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeStylesheet = document.getElementById('dark-mode');
+        const profilePic = document.getElementById('profile-pic');
+
+        darkModeToggle.addEventListener('click', () => {
+            darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
+            if (darkModeStylesheet.disabled) {
+                profilePic.src = "prof_pic.jpg";
+            } else {
+                profilePic.src = 'flipped-images.jpg';
+            }
+        });
+    </script>
+</body>
+</html>

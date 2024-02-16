@@ -1,0 +1,21 @@
+/* Dark Mode Styles */
+body {
+    background-color: #fbb040;
+    color: #121111;
+}
+
+header {
+    background-color: #2f3c4f;
+}
+
+header nav a {
+    color: #fff;
+}
+
+footer {
+    background-color: #de703c;
+}
+
+footer .message {
+    color: #121111;
+}
