@@ -33,7 +33,7 @@ h1 {
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px){
   .container {
       flex-direction: column;
   }
@@ -41,13 +41,18 @@ h1 {
   .image, .text {
       flex: none;
   }
+
+  header footer{
+    width:100%;
+  }
 }
 
 /* Header Styles */
 header {
-  background-color: #2e79ba;
+  background-color: #0066c8;
   color: #fff;
-  padding: 30px 30px 10px;
+  padding: 28px 25px 10px;
+  display: block;
 }
 
 header h1 {
@@ -58,6 +63,7 @@ header h1 {
 nav {
   display: flex;
   justify-content: space-around;
+  padding: 25px 30px 10px;
 }
 
 header nav a {
@@ -91,15 +97,10 @@ select {
 }
 
 /* Main Content Styles */
-main {
-  padding: 20px;
-}
-
 section {
   margin-bottom: 20px;
-  padding: auto;
   margin-left: 30px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 p {
@@ -147,10 +148,13 @@ form {
   width: 50%;
   margin: 0 auto;
 }
-
+.selection label{
+  color: #ffffff;
+}
 label {
   display: block;
   margin-bottom: 5px;
+  color: #ffffff;
 }
 
 input, textarea {
@@ -161,32 +165,45 @@ input, textarea {
 }
 
 button {
-  background-color: #557ca4;
+  background-color: inherit;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 5px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  font-size: 16px;
+
 }
 
 button:hover {
-  background-color: #343a40;
+  letter-spacing: 2px;
 }
 
 /* Footer Styles */
 footer {
   padding: 20px;
-  background-color: #f5f5f5;
-  color: #070707;
+  background: linear-gradient(271deg, rgb(95 86 233) 0%, rgb(133 133 223) 35%, rgba(0,212,255,1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-footer .message {
+footer .message{
   padding-bottom: 20px;
 }
 
+footer .message button{
+  padding: 10px;
+  background-color: #0066c8;
+  letter-spacing: normal;
+}
+
+footer .message button:hover{
+  padding: 10px;
+  background-color: #4c6e98;
+  letter-spacing: normal;
+}
 .contact-icons {
   justify-content: space-around;
   display: flex;
@@ -210,7 +227,8 @@ footer .message {
 /* Audio Player Styles */
 audio {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
+  height: 45px;
 }
 
 audio::-webkit-media-controls-panel {
@@ -218,6 +236,6 @@ audio::-webkit-media-controls-panel {
   border-radius: 5px;
 }
 
-audio::-webkit-media-controls-play-button {
-  color: #10316b;
+video {
+  margin-top: 15px;
 }

@@ -1,11 +1,11 @@
 /* Dark Mode Styles */
 body {
-    background-color: #fbb040;
-    color: #121111;
+    background-color: #6786ad;
+    color: #ebe9e9;
 }
 
 header {
-    background-color: #2f3c4f;
+    background: #2f3c4f;
 }
 
 header nav a {
@@ -13,9 +13,23 @@ header nav a {
 }
 
 footer {
-    background-color: #de703c;
+    background: #385170;
 }
 
 footer .message {
-    color: #121111;
+    color: #ffffff;
+}
+footer .message button{
+    padding: 10px;
+    background-color: #0077b7;
+    letter-spacing: normal;
+  }
+  
+footer .message button:hover{
+    padding: 10px;
+    background-color: #059ff2;
+    letter-spacing: normal;
+}
+label{
+    color: #f9f8f8;
 }

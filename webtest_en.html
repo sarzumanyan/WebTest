@@ -39,16 +39,15 @@
                       <source src="Arctic Monkeys – Why'd You Only Call Me When You're High_.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
                     </audio>
-                    <video width="120" height="240" controls>
-                      <source src="darkmode.mp4" type="video/mp4">
+                    <video id = "profile-video" width=100% controls autoplay loop>
+                      <source  src="light-mode.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
-                    
                 </div>
             </section>
         </div>
         <div class="image">
-            <img id="profile-pic" src="prof_pic.jpg" alt="Profile picture">
+            <img id="profile-pic" src="prof-pic.jpg" alt="Profile picture">
         </div>
     </div>
         <hr>
@@ -98,14 +97,14 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" required></textarea>
             <button type="submit">Send Message</button>
           </form>
         </div>
         <div class="contact-icons">
-          <a href="mailto:sona.arzumanyan42@gmail.com.com">
+          <a href="mailto:sona.arzumanyan42@gmail.com">
               <img src="mail-icon.png" alt="Email">
           </a>
           <a href="https://www.linkedin.com/in/sona-arzumanyan-857517273/">
@@ -123,8 +122,6 @@
       </div>
     </section>
     </footer>
-
-
     <script>
         function changeLanguage(select) {
             var selectedLanguage = select.value;
@@ -136,15 +133,20 @@
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const darkModeStylesheet = document.getElementById('dark-mode');
         const profilePic = document.getElementById('profile-pic');
+        const profileVideo = document.getElementById('profile-video');
 
         darkModeToggle.addEventListener('click', () => {
-            darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
-            if (darkModeStylesheet.disabled) {
-                profilePic.src = "prof_pic.jpg";
-            } else {
-                profilePic.src = 'flipped-images.jpg';
-            }
-        });
+      darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
+      if (darkModeStylesheet.disabled) {
+          profilePic.src = "prof-pic.jpg";
+          darkModeToggle.textContent = 'Dark mode';
+          profileVideo.src = 'light-mode.mp4'
+      } else {
+          profilePic.src = 'dark-pic.jpg';
+          darkModeToggle.textContent = 'Light mode';
+          profileVideo.src = 'dark-mode.mp4'
+      }
+  });
     </script>
 </body>
 </html>
