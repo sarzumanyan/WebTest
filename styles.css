@@ -42,8 +42,20 @@ h1 {
       flex: none;
   }
 
-  header footer{
-    width:100%;
+  header, footer{
+    width: 100%;
+    margin-left: 0;
+    padding-left: 5px;
+  }
+
+  nav, nav button, nav label{
+    font-size: 8px;
+  }
+  nav select{
+    font-size: 7px;
+  }
+  h1{
+    font-size: 20px;
   }
 }
 
@@ -63,7 +75,7 @@ header h1 {
 nav {
   display: flex;
   justify-content: space-around;
-  padding: 25px 30px 10px;
+  padding: 0px 30px 10px 0px;
 }
 
 header nav a {
@@ -112,7 +124,9 @@ img {
   max-width: 200px;
   display: inline;
   margin: 0 auto;
+  box-shadow: 0 0 10px rgba(11, 11, 11, 0.1);
 }
+
 
 table {
   width: 100%;
@@ -197,6 +211,7 @@ footer .message button{
   padding: 10px;
   background-color: #0066c8;
   letter-spacing: normal;
+  width: 106%;
 }
 
 footer .message button:hover{
@@ -218,7 +233,10 @@ footer .message button:hover{
   width: 40px;
   height: 40px;
 }
-
+.contact-icons img:hover{
+  opacity: 0.8; /* Reduces opacity when hovered */
+  transition: opacity 0.3s ease;
+}
 #contact-form {
   width: 98%;
   max-width: 300px;
@@ -238,4 +256,5 @@ audio::-webkit-media-controls-panel {
 
 video {
   margin-top: 15px;
+  width: 95%;
 }
