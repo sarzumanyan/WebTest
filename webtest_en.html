@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <html lang="en">
-    <title>WebTest</title>
+    <title>WebSite</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="dark-mode.css" id="dark-mode" disabled>
 </head>
 
 <body>
     <header>
+      <button id="mode-toggle" class="button-dark"></button>
        <h1>Welcome to my website</h1>
        <nav>
-        <a href="#about">About</a>
+        <a href="haha.html">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
-        <button id="dark-mode-toggle">Dark Mode</button>
         <div class="selection">
           <label for="languages">Select language:</label>
           <select name="languages" id="languages" onchange="changeLanguage(this)">
@@ -43,6 +43,7 @@
                       <source  src="light-mode.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
+                    <br><span>Shot at <sub>17:30</sub></span>
                 </div>
             </section>
         </div>
@@ -130,23 +131,25 @@
             }
         }
 
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeToggle = document.getElementById('mode-toggle');
         const darkModeStylesheet = document.getElementById('dark-mode');
         const profilePic = document.getElementById('profile-pic');
         const profileVideo = document.getElementById('profile-video');
 
         darkModeToggle.addEventListener('click', () => {
-      darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
-      if (darkModeStylesheet.disabled) {
-          profilePic.src = "prof-pic.jpg";
-          darkModeToggle.textContent = 'Dark mode';
-          profileVideo.src = 'light-mode.mp4'
-      } else {
-          profilePic.src = 'dark-pic.jpg';
-          darkModeToggle.textContent = 'Light mode';
-          profileVideo.src = 'dark-mode.mp4'
-      }
-  });
+            darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
+            if (darkModeStylesheet.disabled) {
+                profilePic.src = "prof-pic.jpg";
+                profileVideo.src = 'light-mode.mp4';
+                darkModeToggle.classList.add('button-dark');
+                darkModeToggle.classList.remove('button-light');
+            } else {
+                profilePic.src = 'dark-pic.jpg';
+                profileVideo.src = 'dark-mode.mp4'
+                darkModeToggle.classList.add('button-light');
+                darkModeToggle.classList.remove('button-dark');
+            }
+        });
     </script>
 </body>
 </html>

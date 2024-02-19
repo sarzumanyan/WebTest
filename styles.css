@@ -1,9 +1,9 @@
 /* General Styles */
 body {
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #e3f5ff;
 }
 
 h1 {
@@ -26,11 +26,6 @@ h1 {
 .image {
   flex: 1;
   text-align: center;
-}
-
-.image img {
-  max-width: 50%;
-  height: auto;
 }
 
 @media (max-width: 767px){
@@ -60,11 +55,14 @@ h1 {
 }
 
 /* Header Styles */
-header {
-  background-color: #0066c8;
+header, footer {
+  /*background-color: #0066c8;*/
   color: #fff;
   padding: 28px 25px 10px;
   display: block;
+  background-image: url("blue-trianglify-8e4a0501.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header h1 {
@@ -120,11 +118,12 @@ p {
   line-height: 1.5;
 }
 
-img {
-  max-width: 200px;
+.image img {
   display: inline;
   margin: 0 auto;
-  box-shadow: 0 0 10px rgba(11, 11, 11, 0.1);
+  box-shadow: 20px 18px 20px 3px rgba(11, 11, 11, 0.1);
+  max-width: 45%;
+  height: auto;
 }
 
 
@@ -134,9 +133,12 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #a5b11f57;
   padding: 8px;
   text-align: left;
+}
+th{
+  background-color: #aec8e066;
 }
 
 ul {
@@ -179,25 +181,38 @@ input, textarea {
 }
 
 button {
-  background-color: inherit;
   color: #fff;
   padding: 15px 5px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  letter-spacing: 1px;
-  font-size: 16px;
-
 }
 
 button:hover {
   letter-spacing: 2px;
 }
+#mode-toggle {
+  width: 35px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background-size: cover;
+  background-color: transparent;
+  display: flex;
+  margin-left: auto;
+}
 
+.button-light {
+  background-image: url('light.png');
+}
+
+/* Button styles for dark mode */
+.button-dark {
+  background-image: url('dark.png');
+}
 /* Footer Styles */
 footer {
   padding: 20px;
-  background: linear-gradient(271deg, rgb(95 86 233) 0%, rgb(133 133 223) 35%, rgba(0,212,255,1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,17 +259,18 @@ footer .message button:hover{
 
 /* Audio Player Styles */
 audio {
-  width: 100%;
+  width: 90%;
   margin-top: 15px;
   height: 45px;
 }
 
 audio::-webkit-media-controls-panel {
-  background-color: #f0f0f0;
+  background-color: #e3f5ff;
   border-radius: 5px;
 }
 
 video {
   margin-top: 15px;
-  width: 95%;
+  max-width: 90%;
+  box-shadow: 20px 18px 20px 3px rgba(11, 11, 11, 0.1);
 }
