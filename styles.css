@@ -178,6 +178,7 @@ input, textarea {
   padding: 8px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
+  border-radius: 10px 100px/120px 100px;
 }
 
 button {
@@ -226,7 +227,8 @@ footer .message button{
   padding: 10px;
   background-color: #0066c8;
   letter-spacing: normal;
-  width: 106%;
+  width: 106%;  
+  border-radius: 10px 100px/120px 100px;
 }
 
 footer .message button:hover{
