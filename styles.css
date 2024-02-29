@@ -181,7 +181,7 @@ input, textarea {
   border-radius: 10px 100px/120px 100px;
 }
 textarea{
-  resize: vertical;
+  resize: none;
   height: 40px;
 }
 button {
